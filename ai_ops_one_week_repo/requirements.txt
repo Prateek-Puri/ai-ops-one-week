@@ -1,0 +1,16 @@
+numpy
+pandas
+scikit-learn
+xgboost
+lightgbm
+statsmodels
+matplotlib
+seaborn
+shap
+pulp
+ortools
+chromadb
+fastapi
+uvicorn
+pydantic
+markdown
