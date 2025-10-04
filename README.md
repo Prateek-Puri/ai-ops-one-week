@@ -57,6 +57,10 @@ Replace `<USER>` with your GitHub username:
   - docs/executive_memo.md
   - (optional) docs/executive_memo.pdf
 
+## Day 6 Summary
+- Learning notes and governance checklist that explain rigor, limits, and guardrails.
+- Artifacts:
+  - docs/day6_notes.md
 
 
 ## Structure
