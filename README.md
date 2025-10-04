@@ -33,6 +33,15 @@ Replace `<USER>` with your GitHub username:
   - ml-model/figures/day2_feature_importances.csv
 
 
+  ## Day 4 Summary
+- Workforce linear program meets 7 day demand with minimum cost and a clear overtime tradeoff.
+- Sensitivity: report cost at 0.9x, 1.0x, 1.1x, 1.2x demand.
+- Artifacts:
+  - optimizer/figures/day4_sensitivity.png
+  - optimizer/SO_WHAT_DAY4.txt
+
+
+
 ## Structure
 
 This repository contains three tangible deliverables you can finish in seven days:

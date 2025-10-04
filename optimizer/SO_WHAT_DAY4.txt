@@ -1,0 +1,5 @@
+So what (Day 4):
+- Optimal schedule meets demand at minimum cost with controlled overtime.
+- Cost rises from 361.6 at 1.0x demand to 428.8 at 1.2x.
+- Set an overtime cap per day and cross train to reduce OT spikes.
+- Next - add headcount ramp limits and minimum-days-on-shift rule.
