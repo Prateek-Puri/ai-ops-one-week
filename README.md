@@ -51,6 +51,12 @@ Replace `<USER>` with your GitHub username:
   - optimizer/figures/day4_sensitivity.png
   - optimizer/SO_WHAT_DAY4.txt
 
+## Day 5 Summary
+- Two page executive memo that ties baselines, model uplift, optimization tradeoffs, and the RAG assistant into actions and risks.
+- Artifacts:
+  - docs/executive_memo.md
+  - (optional) docs/executive_memo.pdf
+
 
 
 ## Structure
