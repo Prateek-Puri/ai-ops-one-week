@@ -32,6 +32,17 @@ Replace `<USER>` with your GitHub username:
   - ml-model/figures/day2_partial_promo.png
   - ml-model/figures/day2_feature_importances.csv
 
+  ## Day 3 Summary
+- Built a browser-only TF-IDF Q and A over Markdown SOPs and KPI glossary.
+- Endpoints: `GET /` health, `POST /ask` returns top-k snippets with sources.
+- No paid APIs. Runs entirely in Codespaces.
+
+### Artifacts
+- `rag-assistant/app.py`
+- `docs/kpi_glossary_example.md`
+- `docs/sop_example_inventory.md`
+- (optional) `docs/screenshots/day3_health.png`, `docs/screenshots/day3_ask.png`
+
 
   ## Day 4 Summary
 - Workforce linear program meets 7 day demand with minimum cost and a clear overtime tradeoff.
