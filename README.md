@@ -1,1 +1,71 @@
-# ai-ops-one-week
+# AI Ops One-Week Portfolio
+# AI Ops One-Week Portfolio
+
+## Day 1 Summary
+- Model reduces MAE vs naive baseline by **11.9%** on holdout.
+- Top drivers: **promo**, **price**.
+- Seasonality present - adjust safety stock accordingly.
+- Segment variance differs - consider segment specific policies.
+- Next 48 hours - add calendar features and run a small price promo test.
+
+## Day 1 Artifacts
+- Notebook: `ml-model/01_baseline.ipynb`
+- Chart: `ml-model/figures/actual_vs_pred.png`
+- Importances CSV: `ml-model/figures/feature_importances.csv`
+- So what note: `ml-model/SO_WHAT.txt`
+
+## Day 1 Artifact Links (make these clickable once your repo is public)
+Replace `<USER>` with your GitHub username:
+- Notebook: `https://github.com/<USER>/ai-ops-one-week/blob/main/ml-model/01_baseline.ipynb`
+- Chart: `https://github.com/<USER>/ai-ops-one-week/blob/main/ml-model/figures/actual_vs_pred.png`
+- Repo root: `https://github.com/<USER>/ai-ops-one-week`
+
+---
+
+## Day 2 Summary
+- Compared 4 week seasonal baseline vs model. MAE uplift: **24.7%**.
+- Partial effects: price tends to reduce demand, promo adds lift.
+- Top drivers: **price**, **promo**
+- Artifacts:
+  - ml-model/figures/day2_actual_model_baseline.png
+  - ml-model/figures/day2_partial_price.png
+  - ml-model/figures/day2_partial_promo.png
+  - ml-model/figures/day2_feature_importances.csv
+
+
+## Structure
+
+This repository contains three tangible deliverables you can finish in seven days:
+1. **ML model** for demand or churn with clear business readout.
+2. **RAG Ops Assistant** that answers SOP and KPI questions from local markdown sources with citations.
+3. **Optimization model** for inventory or workforce planning with sensitivity.
+4. **Executive memo** and short screen recordings tying everything together.
+
+## Structure
+```
+ml-model/                   # Notebooks for baseline and drivers
+rag-assistant/              # Simple FastAPI app + local vector store (Chroma)
+optimizer/                  # Linear or integer programming notebook
+docs/                       # Executive memo template, SOPs, KPI glossary
+data/                       # Sample CSV and placeholders
+```
+
+## Quickstart
+1. Create a Python 3.10+ virtual environment and install packages:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate   # Windows: .venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+
+2. Run the **baseline ML notebook** in `ml-model/01_baseline.ipynb` and save metrics images to `ml-model/figures/`.
+
+3. Launch the **RAG app** from `rag-assistant/`:
+   ```bash
+   uvicorn app:app --reload --port 8000
+   ```
+   Then open http://127.0.0.1:8000 and use the `/ask` endpoint via Swagger UI to test.
+
+4. Open the **optimizer notebook** in `optimizer/inventory_or_workforce.ipynb`, choose inventory or workforce mode, and run the sensitivity cell.
+
+5. Export `docs/executive_memo_template.md` to PDF and update `README.md` with links to your artifacts and videos.

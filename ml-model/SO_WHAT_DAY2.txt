@@ -1,0 +1,6 @@
+So what (Day 2):
+- Against a seasonal 4-week baseline, model reduces MAE by 24.7%.
+- Top drivers: price, promo.
+- Price partial shows expected negative slope; promo partial shows positive lift.
+- Use seasonal baseline for safety stock; use model to prioritize promo/price cells.
+- Next: add calendar features (holidays) and region segmentation for stability.
