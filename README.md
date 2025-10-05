@@ -20,6 +20,12 @@ Replace `<USER>` with your GitHub username:
 - Chart: `https://github.com/<USER>/ai-ops-one-week/blob/main/ml-model/figures/actual_vs_pred.png`
 - Repo root: `https://github.com/<USER>/ai-ops-one-week`
 
+**Day 1 WOW**
+- Overbooking policy: converts predicted no show risk into extra bookings per block at a chosen service level. See overbooking_policy.csv and figures/day1_overbooking_policy.png.
+- Smart micro windows: two non adjacent blocks to target with a small offer that fills valleys without creating peaks. See smart_windows.csv and figures/day1_smart_windows.png.
+- Policy frontier: simple chart to pick discount and risk tolerance. See policy_frontier.csv and figures/day1_policy_frontier.png.
+
+
 ---
 
 ## Day 2 Summary
@@ -61,6 +67,14 @@ Replace `<USER>` with your GitHub username:
 - Learning notes and governance checklist that explain rigor, limits, and guardrails.
 - Artifacts:
   - docs/day6_notes.md
+
+## Day 7 Summary
+- Slides outline and talk track to present the week.
+- Repo polish: consistent artifact links, clear steps to reproduce.
+
+### Artifacts
+- docs/day7_slides_outline.md
+- docs/day7_talk_track.md
 
 
 ## Structure
