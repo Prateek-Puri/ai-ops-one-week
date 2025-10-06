@@ -1,26 +1,7 @@
 # AI Ops One-Week Portfolio
 # AI Ops One-Week Portfolio
 
-## Day 1 Summary
-- Model reduces MAE vs naive baseline by **11.9%** on holdout.
-- Top drivers: **promo**, **price**.
-- Seasonality present - adjust safety stock accordingly.
-- Segment variance differs - consider segment specific policies.
-- Next 48 hours - add calendar features and run a small price promo test.
-
-## Day 1 Artifacts
-- Notebook: `ml-model/01_baseline.ipynb`
-- Chart: `ml-model/figures/actual_vs_pred.png`
-- Importances CSV: `ml-model/figures/feature_importances.csv`
-- So what note: `ml-model/SO_WHAT.txt`
-
-## Day 1 Artifact Links (make these clickable once your repo is public)
-Replace `<USER>` with your GitHub username:
-- Notebook: `https://github.com/<USER>/ai-ops-one-week/blob/main/ml-model/01_baseline.ipynb`
-- Chart: `https://github.com/<USER>/ai-ops-one-week/blob/main/ml-model/figures/actual_vs_pred.png`
-- Repo root: `https://github.com/<USER>/ai-ops-one-week`
-
-**Day 1 WOW**
+**Day 1 **
 - Overbooking policy: converts predicted no show risk into extra bookings per block at a chosen service level. See overbooking_policy.csv and figures/day1_overbooking_policy.png.
 - Smart micro windows: two non adjacent blocks to target with a small offer that fills valleys without creating peaks. See smart_windows.csv and figures/day1_smart_windows.png.
 - Policy frontier: simple chart to pick discount and risk tolerance. See policy_frontier.csv and figures/day1_policy_frontier.png.
@@ -28,15 +9,25 @@ Replace `<USER>` with your GitHub username:
 
 ---
 
-## Day 2 Summary
-- Compared 4 week seasonal baseline vs model. MAE uplift: **24.7%**.
-- Partial effects: price tends to reduce demand, promo adds lift.
-- Top drivers: **price**, **promo**
-- Artifacts:
-  - ml-model/figures/day2_actual_model_baseline.png
-  - ml-model/figures/day2_partial_price.png
-  - ml-model/figures/day2_partial_promo.png
-  - ml-model/figures/day2_feature_importances.csv
+  ## Day 2  — From rules to an optimal plan
+- Reliability: rolling, time-ordered backtest vs seasonal baseline.  
+- Driver Cards: effect sizes and local elasticity with partial plots.  
+- Segment Policy Cards: recommended actions by clinic or performance.  
+- Optimal weekly plan: portfolio of discount windows and overbooking actions under a budget and risk cap.  
+- Frontiers and pricing: profit vs budget curve and expected cost of a service guarantee.
+
+Artifacts
+- ml-model/driver_cards.csv
+- ml-model/segment_policy_cards.csv
+- ml-model/figures/day2_backtest.png
+- ml-model/figures/day2_partial_*.png
+- ml-model/figures/day2_allocation_frontier.png
+- ml-model/figures/day2_guarantee_pricing.png
+- ml-model/figures/day2_decision_board.png
+- optimizer/campaign_plan.csv
+- optimizer/allocation_frontier.csv
+- optimizer/guarantee_pricing.csv
+
 
   ## Day 3 Summary
 - Built a browser-only TF-IDF Q and A over Markdown SOPs and KPI glossary.
@@ -113,3 +104,26 @@ data/                       # Sample CSV and placeholders
 4. Open the **optimizer notebook** in `optimizer/inventory_or_workforce.ipynb`, choose inventory or workforce mode, and run the sensitivity cell.
 
 5. Export `docs/executive_memo_template.md` to PDF and update `README.md` with links to your artifacts and videos.
+
+## Day 2 - Decisions and Allocation
+
+- Reliability: rolling, time-ordered backtest vs a seasonal baseline.  
+- Driver cards: effect sizes and local elasticity with partial plots.  
+- Segment policy cards: recommended actions per segment.  
+- Optimal plan: selected actions under a budget and a service risk cap.  
+- Frontiers and pricing: profit vs budget curve and expected cost of a no-wait guarantee.  
+
+**Backtest summary**  
+- Folds: 100  
+- Percent folds beating baseline: 70.0%  
+- Average uplift vs seasonal baseline: 1.8%  
+- Min uplift: -78.7%, Max uplift: 18.6%  
+
+**Artifacts**  
+- `ml-model/figures/day2_backtest.png`  
+- `ml-model/driver_cards.csv`  
+- `ml-model/segment_policy_cards.csv`  
+- `ml-model/figures/day2_allocation_frontier.png`  
+- `ml-model/figures/day2_guarantee_pricing.png`  
+- `ml-model/figures/day2_decision_board.png`  
+- `optimizer/campaign_plan.csv`, `optimizer/allocation_frontier.csv`, `optimizer/guarantee_pricing.csv`
